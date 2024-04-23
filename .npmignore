@@ -15,6 +15,6 @@ lib/mocks
 npm-debug.log
 test
 lib/*
-tsconfig-build.json
-tsconfig.json
+# tsconfig-build.json
+# tsconfig.json
 .tool-versions
