@@ -67,6 +67,7 @@ Napi::Value Open(const Napi::CallbackInfo& info) {
   baton->xany = getBoolFromObject(options, "xany");
   baton->hupcl = getBoolFromObject(options, "hupcl");
   baton->lock = getBoolFromObject(options, "lock");
+  baton->skipBaudRate = getBoolFromObject(options, "skipBaudRate");
 
   #ifndef WIN32
     baton->vmin = getIntFromObject(options, "vmin");

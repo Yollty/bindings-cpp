@@ -277,6 +277,10 @@ int setup(int fd, OpenBaton *data) {
     }
   }
 
+  if (data->skipBaudRate) {
+    return 1;
+  }
+
   // Copy the connection options into the ConnectionOptionsBaton to set the baud rate
   ConnectionOptions* connectionOptions = new ConnectionOptions();
   connectionOptions->fd = fd;

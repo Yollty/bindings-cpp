@@ -71,6 +71,7 @@ struct OpenBaton : public Napi::AsyncWorker {
   bool xany = false;
   bool hupcl = false;
   bool lock = false;
+  bool skipBaudRate = false;
   SerialPortParity parity;
   SerialPortStopBits stopBits;
   SerialPortRtsMode rtsMode;
