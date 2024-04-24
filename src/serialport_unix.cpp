@@ -85,8 +85,7 @@ void OpenBaton::Execute() {
   int fd = open(path, flags);
 
   if (-1 == fd) {
-    snprintf(errorString, sizeof(errorString), "Success: %d, cannot open %s", this->skipBaudRate, path);
-    // snprintf(errorString, sizeof(errorString), "Error: %s, cannot open %s", strerror(errno), path);
+    snprintf(errorString, sizeof(errorString), "Error: %s, cannot open %s", strerror(errno), path);
     this->SetError(errorString);
     return;
   }
