@@ -8,7 +8,7 @@
 *.md
 *.test.js
 bin
-build/
+build
 codecov.yml
 coverage
 lib/mocks
