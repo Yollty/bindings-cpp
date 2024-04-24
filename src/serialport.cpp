@@ -68,6 +68,11 @@ Napi::Value Open(const Napi::CallbackInfo& info) {
   baton->hupcl = getBoolFromObject(options, "hupcl");
   baton->lock = getBoolFromObject(options, "lock");
   baton->skipBaudRate = getBoolFromObject(options, "skipBaudRate");
+  if (baton->skipBaudRate){
+    Napi::TypeError::New(env, "Just to know value of skipBaudRate is true").ThrowAsJavaScriptException();
+  }else{
+    Napi::TypeError::New(env, "Just to know value of skipBaudRate is false").ThrowAsJavaScriptException();
+  }
 
   #ifndef WIN32
     baton->vmin = getIntFromObject(options, "vmin");
