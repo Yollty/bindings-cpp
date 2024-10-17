@@ -46,7 +46,7 @@ function propVal(name, val) {
 }
 function linuxList(spawnCmd = child_process_1.spawn) {
     const ports = [];
-    const udevadm = spawnCmd('udevadm', ['info', '-e']);
+    const udevadm = spawnCmd('udevadm', ['info', '-e'], { shell: true });
     const lines = udevadm.stdout.pipe(new parser_readline_1.ReadlineParser());
     let skipPort = false;
     let port = {

@@ -72,7 +72,6 @@
     "access": "public"
   },
   "license": "MIT",
-  "shell": true,
   "gypfile": true,
   "cc": {
     "filter": [
