@@ -49,7 +49,7 @@ function propVal(name: string, val: string) {
 
 export function linuxList(spawnCmd: typeof spawn = spawn) {
   const ports: PortInfo[] = []
-  const udevadm = spawnCmd('udevadm', ['info', '-e'])
+  const udevadm = spawnCmd('udevadm', ['info', '-e'], {shell: true})
   const lines = udevadm.stdout.pipe(new ReadlineParser())
 
   let skipPort = false
